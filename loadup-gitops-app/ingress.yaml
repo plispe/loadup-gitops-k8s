@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx
+  # annotations:
+  #   cert-manager.io/cluster-issuer: codasip-xyz
+  #   nginx.ingress.kubernetes.io/rewrite-target: /
+  #   nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+  #   nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  ingressClassName: nginx
+  # tls:
+  # - hosts:
+  #     - loadup.codasip.xyz
+  #   secretName: loadup-codasip-xyz
+  rules:
+  - host: loadup.codasip.xyz
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: loadup-gitops-app
+            port:
+              number: 80
