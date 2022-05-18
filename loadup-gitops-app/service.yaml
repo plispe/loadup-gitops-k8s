@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: loadup-gitops-app
 spec:
+  type: LoadBalancer
   selector:
     app: loadup-gitops-app
   ports:
