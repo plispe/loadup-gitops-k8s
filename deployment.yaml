@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loadup-gitops-app
+  labels:
+    app: loadup-gitops-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: loadup-gitops-app
+  template:
+    metadata:
+      labels:
+        app: loadup-gitops-app
+    spec:
+      containers:
+      - name: app
+        image: petrpliska/loadup-gitops-app:0.1.1
+        ports:
+        - containerPort: 80
