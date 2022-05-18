@@ -5,7 +5,7 @@ metadata:
   labels:
     app: loadup-gitops-app
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: loadup-gitops-app
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: app
-        image: petrpliska/loadup-gitops-app:0.1.1
+        image: petrpliska/loadup-gitops-app:1.0.0
         ports:
         - containerPort: 80
