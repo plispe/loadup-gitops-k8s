@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: app
-        image: petrpliska/loadup-gitops-app:0.1.0
+        image: petrpliska/loadup-gitops-app:1.0.0
         ports:
         - containerPort: 80
