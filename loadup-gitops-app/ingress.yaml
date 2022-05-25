@@ -3,16 +3,16 @@ kind: Ingress
 metadata:
   name: loadup-gitops-app
   annotations:
-    cert-manager.io/cluster-issuer: loadup-tech
+    # cert-manager.io/cluster-issuer: loadup-tech
     nginx.ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    # nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    # nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
   ingressClassName: nginx
-  tls:
-  - hosts:
-      - gitops.loadup.tech
-    secretName: gitops-loadup-tech
+  # tls:
+  # - hosts:
+  #     - gitops.loadup.tech
+  #   secretName: gitops-loadup-tech
   rules:
   # - host: loadup.codasip.xyz
   - host: gitops.loadup.tech
