@@ -15,7 +15,7 @@ spec:
   #   secretName: gitops-loadup-tech
   rules:
   # - host: loadup.codasip.xyz
-  - host: gitops.loadup.tech
+  - host: test.argo.ipex.fun
     http:
       paths:
       - path: /
